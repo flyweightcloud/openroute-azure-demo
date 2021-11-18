@@ -1,0 +1,25 @@
+{
+  "name": "",
+  "version": "",
+  "scripts": {
+    "build": "tsc",
+    "build:production": "npm run prestart && npm prune --production",
+    "watch": "tsc --w",
+    "prestart": "npm run build && func extensions install",
+    "start:host": "func start",
+    "start": "npm-run-all --parallel start:host watch",
+    "test": "echo \"No tests yet...\"",
+    "deploy": "npm i && npm run build:production && func azure functionapp publish $AZ_FN --typescript --force && npm i"
+  },
+  "description": "",
+  "devDependencies": {
+    "@azure/functions": "^1.0.1-beta1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "@flyweight.cloud/openroute": "^0.6.0-beta.0",
+    "@flyweight.cloud/request": "^0.1.4",
+    "@flyweight.cloud/swaggerist": "^0.2.0-beta.0"
+  }
+}

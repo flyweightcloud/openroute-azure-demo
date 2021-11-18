@@ -1,0 +1,11 @@
+*.js.map
+*.ts
+.git*
+.vscode
+local.settings.json
+test
+getting_started.md
+node_modules/@types
+node_modules/@flyweight.cloud/**/*
+!node_modules/@flyweight.cloud/**/*.js
+!node_modules/@flyweight.cloud/**/*.json
