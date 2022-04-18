@@ -5,6 +5,8 @@
     "build": "tsc",
     "build:production": "npm run prestart && npm prune --production",
     "watch": "tsc --w",
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prestart": "npm run build && func extensions install",
     "start:host": "func start",
     "start": "npm-run-all --parallel start:host watch",
@@ -18,8 +20,11 @@
     "typescript": "^3.3.3"
   },
   "dependencies": {
-    "@flyweight.cloud/openroute": "^0.6.0-beta.0",
+    "@flyweight.cloud/openroute": "^0.6.1",
     "@flyweight.cloud/request": "^0.1.4",
-    "@flyweight.cloud/swaggerist": "^0.2.0-beta.0"
+    "@flyweight.cloud/swaggerist": "^0.2.0-beta.0",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "eslint": "^8.13.0"
   }
 }
