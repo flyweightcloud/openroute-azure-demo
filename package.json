@@ -3,11 +3,10 @@
   "version": "0.0.1",
   "scripts": {
     "build": "tsc",
-    "build:production": "npm run prestart && npm prune --production",
+    "build:production": "npm run build && npm prune --production",
     "watch": "tsc --w",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "prestart": "npm run build && func extensions install",
     "start:host": "func start",
     "start": "npm-run-all --parallel start:host watch",
     "test": "echo \"No tests yet...\"",
